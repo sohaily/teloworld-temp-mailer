@@ -7,6 +7,7 @@ const multer = require("multer");
 const np = require("path");
 const dotenv = require("dotenv").config();
 const app = express();
+const serverless = require('serverless-http');
 // var firebaseConfig= require("./config/firebaseConfig")
 
 const admin = require('firebase-admin');
@@ -179,7 +180,9 @@ app.post("/sendemail", function (req, res) {
     
   });
 //});
-app.listen(8000) 
+//app.listen(8000) 
+module.exports = app;
+module.exports.handler = serverless(app);
 // app.listen(8000, () => {
 //   console.log("Server started on port http://localhost:" + process.env.PORT);
 // });
