@@ -1,0 +1,32 @@
+{
+  "name": "Nodemailer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.1",
+    "firebase": "^9.18.0",
+    "firebase-admin": "^11.5.0",
+    "i": "^0.3.7",
+    "multer": "^1.4.2",
+    "nodemailer": "^6.4.10",
+    "npm": "^9.6.2",
+    "uuid-v4": "^0.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.21"
+  },
+  "engines": {
+    "node": "14.x"
+  }
+}
