@@ -180,9 +180,9 @@ app.post("/sendemail", function (req, res) {
     
   });
 //});
-//app.listen(8000) 
-module.exports = app;
-module.exports.handler = serverless(app);
+app.listen(8000) 
+// module.exports = app;
+// module.exports.handler = serverless(app);
 // app.listen(8000, () => {
 //   console.log("Server started on port http://localhost:" + process.env.PORT);
 // });
