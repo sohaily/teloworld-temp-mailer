@@ -24,6 +24,7 @@ const fileManagement = require('./controller/fileManagementRouter');
 const cities = require('./controller/citiesRouter');
 const productsSpecs = require('./controller/productManagementRouter');
 const usersManagement = require('./controller/userManagementRouter');
+const authenticationManagement = require('./controller/authenticationRouter');
 
 
 
@@ -39,6 +40,7 @@ app.use(fileManagement);
 app.use(cities);
 app.use(productsSpecs);
 app.use(usersManagement);
+app.use(authenticationManagement);
 app.use(express.static("public"));
 
 var orderNo;
