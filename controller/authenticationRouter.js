@@ -24,20 +24,16 @@ const admin = require('firebase-admin');
         const user = userCredential.user;
         if(user && user.emailVerified === false){
            sendEmailVerification(user).then(()=>{
-                console.log(user)
-            console.log("email verification sent to user");
-            res.status(201).json("email verification sent to user");
+            res.status(201).json(user);
           });
         }
       }).catch(function(error) {
         // Handle Errors here.
         var errorCode = error.code;
         var errorMessage = error.message;
-  
+        res.status(409).json(error.message);
         console.log(errorCode, errorMessage);
       });
-    //  await sendEmailVerification();
-    //   res.status(201).json(user);
     } catch (err) {
       res.status(401).json({ error: err.message });
     }
